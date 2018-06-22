@@ -29,8 +29,12 @@ struct Constants {
         static let DISABLE : CGFloat = 0.6
     }
     
-    struct SEGUE {
+    struct SEGUE_IDENTIFIER {
         static let TO_GALLERY = "SegueToGalleryVC"
         static let TO_PHOTO = "SegueToPhotoVC"
+    }
+    
+    struct REUSABLE_IDENTIFIER {
+        static let GALLERY_CELL = "GalleryCell"
     }
 }

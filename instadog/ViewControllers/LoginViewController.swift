@@ -54,6 +54,6 @@ extension LoginViewController: LoginViewInterface {
     }
     
     func presentPhotoGalleryScreen() {
-        performSegue(withIdentifier: Constants.SEGUE.TO_GALLERY, sender: nil)
+        performSegue(withIdentifier: Constants.SEGUE_IDENTIFIER.TO_GALLERY, sender: nil)
     }
 }

@@ -29,6 +29,7 @@
 		AFEFEF1020DCEFCA00FAC541 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0F20DCEFCA00FAC541 /* CategoryService.swift */; };
 		AFEFEF1220DCF22A00FAC541 /* KeychainStoreUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1120DCF22A00FAC541 /* KeychainStoreUtil.swift */; };
 		AFEFEF1420DD04E500FAC541 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1320DD04E500FAC541 /* GalleryViewController.swift */; };
+		AFEFEF1720DD068000FAC541 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1620DD068000FAC541 /* GalleryCollectionViewCell.swift */; };
 		E2E93668277D49D698DB6A00 /* Pods_instadog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013A04EA523EE4B36CDCE3DB /* Pods_instadog.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		AFEFEF0F20DCEFCA00FAC541 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		AFEFEF1120DCF22A00FAC541 /* KeychainStoreUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStoreUtil.swift; sourceTree = "<group>"; };
 		AFEFEF1320DD04E500FAC541 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		AFEFEF1620DD068000FAC541 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD0B54E1DC7A7B6F7CBE7A43 /* Pods-instadog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instadog/Pods-instadog.debug.xcconfig"; sourceTree = "<group>"; };
 		E2F2C16F407C21E647B88000 /* Pods-instadog-instadogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog-instadogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 			children = (
 				AFEFEEF220DCCE7300FAC541 /* Views */,
 				AFEFEEEC20DC9BE800FAC541 /* ViewControllers */,
+				AFEFEF1520DD066900FAC541 /* Cells */,
 				AFEFEEF520DCCEBF00FAC541 /* ViewHandlers */,
 				AFEFEEF120DCCE7100FAC541 /* Presenters */,
 				AFEFEEF420DCCE7A00FAC541 /* InteractorIOs */,
@@ -285,6 +288,14 @@
 				AFEFEF0720DCDF0800FAC541 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		AFEFEF1520DD066900FAC541 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AFEFEF1620DD068000FAC541 /* GalleryCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,6 +565,7 @@
 				AFA56F4520DC86680098F0B6 /* AppDelegate.swift in Sources */,
 				AFEFEEF920DCCF0800FAC541 /* LoginViewHandlerInterface.swift in Sources */,
 				AFEFEF0520DCDAF600FAC541 /* LoginService.swift in Sources */,
+				AFEFEF1720DD068000FAC541 /* GalleryCollectionViewCell.swift in Sources */,
 				AFEFEEFD20DCCF2400FAC541 /* LoginInteractorIO.swift in Sources */,
 				AFEFEF0320DCDAE200FAC541 /* BaseService.swift in Sources */,
 				AFEFEF0A20DCE1A900FAC541 /* Category.swift in Sources */,
