@@ -103,8 +103,10 @@ extension GalleryViewController: UICollectionViewDataSource {
 }
 
 
-// MARK: UICollectionViewDelegate
+// MARK: UICollectionViewDelegateFlowLayout
 
-extension GalleryViewController: UICollectionViewDelegate {
-    
+extension GalleryViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width / 3, height: view.frame.width / 3)
+    }
 }
