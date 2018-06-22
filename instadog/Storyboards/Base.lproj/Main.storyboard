@@ -179,7 +179,7 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qkw-yK-0Ub">
-                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BAG-m4-8iw">
                                     <size key="itemSize" width="50" height="50"/>
@@ -233,10 +233,10 @@
                         </subviews>
                         <color key="backgroundColor" name="color_background"/>
                         <constraints>
+                            <constraint firstItem="qkw-yK-0Ub" firstAttribute="top" secondItem="i13-Y9-r1C" secondAttribute="top" id="1Vj-7e-ss0"/>
                             <constraint firstItem="i13-Y9-r1C" firstAttribute="trailing" secondItem="5GZ-oO-JpH" secondAttribute="trailing" constant="20" id="3JN-iH-IQM"/>
                             <constraint firstItem="i13-Y9-r1C" firstAttribute="trailing" secondItem="qkw-yK-0Ub" secondAttribute="trailing" id="8In-2g-hjV"/>
                             <constraint firstItem="dzW-iF-oyl" firstAttribute="centerX" secondItem="i13-Y9-r1C" secondAttribute="centerX" id="Ht5-Yz-LMb"/>
-                            <constraint firstItem="qkw-yK-0Ub" firstAttribute="top" secondItem="5GZ-oO-JpH" secondAttribute="bottom" constant="20" id="Msc-c4-jiI"/>
                             <constraint firstItem="cmx-hp-KLG" firstAttribute="centerX" secondItem="i13-Y9-r1C" secondAttribute="centerX" id="ZXq-0S-ECf"/>
                             <constraint firstItem="5GZ-oO-JpH" firstAttribute="leading" secondItem="i13-Y9-r1C" secondAttribute="leading" constant="20" id="cF9-15-M0E"/>
                             <constraint firstAttribute="bottom" secondItem="qkw-yK-0Ub" secondAttribute="bottom" id="che-ru-ov1"/>

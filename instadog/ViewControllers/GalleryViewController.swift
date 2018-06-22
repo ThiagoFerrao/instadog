@@ -52,11 +52,7 @@ class GalleryViewController: UIViewController {
 
 extension GalleryViewController: GalleryViewInterface {
     func setupContent() {
-        if (checkIfGalleryDataIsAvailable()) {
-            collectionView.reloadData()
-            return
-        }
-        
+        collectionView.contentInset = UIEdgeInsets(top: 70, left: 0, bottom: 0, right: 0)
         eventHandler?.segmentWasChangedTo(currentSegmentIndexSelected, title: currentSegmentTitleSelected)
     }
     
