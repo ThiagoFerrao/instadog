@@ -38,4 +38,8 @@ extension LoginViewController: LoginViewInterface {
     func showAlert(_ alertController: UIAlertController) {
         present(alertController, animated: true, completion: nil)
     }
+    
+    func presentPhotoGalleryScreen() {
+        
+    }
 }
