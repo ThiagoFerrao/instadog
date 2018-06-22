@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AFA56F4520DC86680098F0B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F4420DC86680098F0B6 /* AppDelegate.swift */; };
-		AFA56F4720DC86680098F0B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F4620DC86680098F0B6 /* ViewController.swift */; };
+		AFA56F4720DC86680098F0B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F4620DC86680098F0B6 /* LoginViewController.swift */; };
 		AFA56F4A20DC86680098F0B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA56F4820DC86680098F0B6 /* Main.storyboard */; };
 		AFA56F4C20DC86690098F0B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA56F4B20DC86690098F0B6 /* Assets.xcassets */; };
 		AFA56F4F20DC86690098F0B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA56F4D20DC86690098F0B6 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		AFA56F4120DC86680098F0B6 /* instadog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instadog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA56F4420DC86680098F0B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFA56F4620DC86680098F0B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFA56F4620DC86680098F0B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AFA56F4920DC86680098F0B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFA56F4B20DC86690098F0B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFA56F4E20DC86690098F0B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,11 +97,10 @@
 		AFA56F4320DC86680098F0B6 /* instadog */ = {
 			isa = PBXGroup;
 			children = (
+				AFEFEEEC20DC9BE800FAC541 /* ViewControllers */,
+				AFEFEEEB20DC9AD300FAC541 /* Storyboards */,
 				AFA56F4420DC86680098F0B6 /* AppDelegate.swift */,
-				AFA56F4620DC86680098F0B6 /* ViewController.swift */,
-				AFA56F4820DC86680098F0B6 /* Main.storyboard */,
 				AFA56F4B20DC86690098F0B6 /* Assets.xcassets */,
-				AFA56F4D20DC86690098F0B6 /* LaunchScreen.storyboard */,
 				AFA56F5020DC86690098F0B6 /* Info.plist */,
 			);
 			path = instadog;
@@ -123,6 +122,23 @@
 				AFA56F6620DC86690098F0B6 /* Info.plist */,
 			);
 			path = instadogUITests;
+			sourceTree = "<group>";
+		};
+		AFEFEEEB20DC9AD300FAC541 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AFA56F4D20DC86690098F0B6 /* LaunchScreen.storyboard */,
+				AFA56F4820DC86680098F0B6 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AFEFEEEC20DC9BE800FAC541 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFA56F4620DC86680098F0B6 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA56F4720DC86680098F0B6 /* ViewController.swift in Sources */,
+				AFA56F4720DC86680098F0B6 /* LoginViewController.swift in Sources */,
 				AFA56F4520DC86680098F0B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +448,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,7 +456,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,6 +466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
