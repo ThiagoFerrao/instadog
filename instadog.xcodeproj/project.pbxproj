@@ -21,6 +21,12 @@
 		AFEFEEFB20DCCF1400FAC541 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEFA20DCCF1400FAC541 /* LoginPresenter.swift */; };
 		AFEFEEFD20DCCF2400FAC541 /* LoginInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEFC20DCCF2400FAC541 /* LoginInteractorIO.swift */; };
 		AFEFEEFF20DCCF3200FAC541 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEFE20DCCF3200FAC541 /* LoginInteractor.swift */; };
+		AFEFEF0320DCDAE200FAC541 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0220DCDAE200FAC541 /* BaseService.swift */; };
+		AFEFEF0520DCDAF600FAC541 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0420DCDAF600FAC541 /* LoginService.swift */; };
+		AFEFEF0820DCDF0800FAC541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0720DCDF0800FAC541 /* Constants.swift */; };
+		AFEFEF0A20DCE1A900FAC541 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0920DCE1A900FAC541 /* Category.swift */; };
+		AFEFEF0E20DCE1C900FAC541 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0D20DCE1C900FAC541 /* UserAuth.swift */; };
+		AFEFEF1020DCEFCA00FAC541 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0F20DCEFCA00FAC541 /* CategoryService.swift */; };
 		E2E93668277D49D698DB6A00 /* Pods_instadog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013A04EA523EE4B36CDCE3DB /* Pods_instadog.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +71,12 @@
 		AFEFEEFA20DCCF1400FAC541 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		AFEFEEFC20DCCF2400FAC541 /* LoginInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorIO.swift; sourceTree = "<group>"; };
 		AFEFEEFE20DCCF3200FAC541 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		AFEFEF0220DCDAE200FAC541 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		AFEFEF0420DCDAF600FAC541 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		AFEFEF0720DCDF0800FAC541 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AFEFEF0920DCE1A900FAC541 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		AFEFEF0D20DCE1C900FAC541 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		AFEFEF0F20DCEFCA00FAC541 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		BD0B54E1DC7A7B6F7CBE7A43 /* Pods-instadog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instadog/Pods-instadog.debug.xcconfig"; sourceTree = "<group>"; };
 		E2F2C16F407C21E647B88000 /* Pods-instadog-instadogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog-instadogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +160,9 @@
 				AFEFEEF420DCCE7A00FAC541 /* InteractorIOs */,
 				AFEFEEF320DCCE7700FAC541 /* Interactors */,
 				AFEFEF0020DCD7EA00FAC541 /* Services */,
+				AFEFEF0120DCDA8700FAC541 /* Models */,
 				AFEFEEEE20DCC2C600FAC541 /* Utils */,
+				AFEFEF0620DCDEF300FAC541 /* Constants */,
 				AFEFEEEB20DC9AD300FAC541 /* Storyboards */,
 				AFA56F4420DC86680098F0B6 /* AppDelegate.swift */,
 				AFA56F4B20DC86690098F0B6 /* Assets.xcassets */,
@@ -243,8 +257,28 @@
 		AFEFEF0020DCD7EA00FAC541 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AFEFEF0220DCDAE200FAC541 /* BaseService.swift */,
+				AFEFEF0420DCDAF600FAC541 /* LoginService.swift */,
+				AFEFEF0F20DCEFCA00FAC541 /* CategoryService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AFEFEF0120DCDA8700FAC541 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFEFEF0920DCE1A900FAC541 /* Category.swift */,
+				AFEFEF0D20DCE1C900FAC541 /* UserAuth.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AFEFEF0620DCDEF300FAC541 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AFEFEF0720DCDF0800FAC541 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,13 +532,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFEFEEFB20DCCF1400FAC541 /* LoginPresenter.swift in Sources */,
+				AFEFEF0820DCDF0800FAC541 /* Constants.swift in Sources */,
 				AFEFEEF720DCCEE800FAC541 /* LoginViewInterface.swift in Sources */,
+				AFEFEF1020DCEFCA00FAC541 /* CategoryService.swift in Sources */,
 				AFA56F4720DC86680098F0B6 /* LoginViewController.swift in Sources */,
 				AFEFEEF020DCC2F000FAC541 /* ValidationUtil.swift in Sources */,
 				AFEFEEFF20DCCF3200FAC541 /* LoginInteractor.swift in Sources */,
+				AFEFEF0E20DCE1C900FAC541 /* UserAuth.swift in Sources */,
 				AFA56F4520DC86680098F0B6 /* AppDelegate.swift in Sources */,
 				AFEFEEF920DCCF0800FAC541 /* LoginViewHandlerInterface.swift in Sources */,
+				AFEFEF0520DCDAF600FAC541 /* LoginService.swift in Sources */,
 				AFEFEEFD20DCCF2400FAC541 /* LoginInteractorIO.swift in Sources */,
+				AFEFEF0320DCDAE200FAC541 /* BaseService.swift in Sources */,
+				AFEFEF0A20DCE1A900FAC541 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

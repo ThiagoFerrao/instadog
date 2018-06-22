@@ -23,6 +23,11 @@ class LoginInteractor: NSObject {
 
 extension LoginInteractor: LoginInteractorInput {
     func postUserEmail(_ email: String) {
-        
+        LoginService.shared.postUserEmail(email: email, success: { (userAuth) in
+            return
+            
+        }) { (error) in
+            return
+        }
     }
 }
