@@ -95,7 +95,8 @@ extension GalleryViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.REUSABLE_IDENTIFIER.GALLERY_CELL, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.REUSABLE_IDENTIFIER.GALLERY_CELL, for: indexPath) as! GalleryCollectionViewCell
+        cell.imageURL = galleryData[currentSegmentTitleSelected?.lowercased() ?? ""]?[indexPath.row]
         
         return cell
     }

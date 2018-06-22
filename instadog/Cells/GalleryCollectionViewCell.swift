@@ -10,4 +10,11 @@ import UIKit
 
 class GalleryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var dogImage: UIImageView!
+    
+    var imageURL: String? {
+        didSet {
+            
+        }
+    }
 }
