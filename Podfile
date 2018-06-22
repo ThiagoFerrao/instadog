@@ -6,7 +6,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'instadog' do
-  pod 'MaterialComponents/TextFields'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
 
   target 'instadogTests' do
     inherit! :complete
