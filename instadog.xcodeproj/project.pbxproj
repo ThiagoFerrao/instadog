@@ -15,6 +15,7 @@
 		AFA56F4F20DC86690098F0B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA56F4D20DC86690098F0B6 /* LaunchScreen.storyboard */; };
 		AFA56F5A20DC86690098F0B6 /* instadogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F5920DC86690098F0B6 /* instadogTests.swift */; };
 		AFA56F6520DC86690098F0B6 /* instadogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F6420DC86690098F0B6 /* instadogUITests.swift */; };
+		AFEFEEF020DCC2F000FAC541 /* ValidationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEEF20DCC2F000FAC541 /* ValidationUtil.swift */; };
 		E2E93668277D49D698DB6A00 /* Pods_instadog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013A04EA523EE4B36CDCE3DB /* Pods_instadog.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		AFA56F6020DC86690098F0B6 /* instadogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instadogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA56F6420DC86690098F0B6 /* instadogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instadogUITests.swift; sourceTree = "<group>"; };
 		AFA56F6620DC86690098F0B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFEFEEEF20DCC2F000FAC541 /* ValidationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtil.swift; sourceTree = "<group>"; };
 		BD0B54E1DC7A7B6F7CBE7A43 /* Pods-instadog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instadog/Pods-instadog.debug.xcconfig"; sourceTree = "<group>"; };
 		E2F2C16F407C21E647B88000 /* Pods-instadog-instadogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog-instadogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 		AFA56F4320DC86680098F0B6 /* instadog */ = {
 			isa = PBXGroup;
 			children = (
+				AFEFEEEE20DCC2C600FAC541 /* Utils */,
 				AFEFEEEC20DC9BE800FAC541 /* ViewControllers */,
 				AFEFEEEB20DC9AD300FAC541 /* Storyboards */,
 				AFA56F4420DC86680098F0B6 /* AppDelegate.swift */,
@@ -171,6 +174,14 @@
 				AFA56F4620DC86680098F0B6 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AFEFEEEE20DCC2C600FAC541 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFEFEEEF20DCC2F000FAC541 /* ValidationUtil.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA56F4720DC86680098F0B6 /* LoginViewController.swift in Sources */,
+				AFEFEEF020DCC2F000FAC541 /* ValidationUtil.swift in Sources */,
 				AFA56F4520DC86680098F0B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
