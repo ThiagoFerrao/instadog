@@ -11,4 +11,5 @@ import Foundation
 
 protocol LoginModuleInterface {
     func viewDidLoad()
+    func enterEmailButtonTapped(isEmailValid: Bool, userEmail: String?)
 }

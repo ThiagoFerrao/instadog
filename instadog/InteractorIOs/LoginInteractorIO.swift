@@ -9,7 +9,7 @@
 import Foundation
 
 protocol LoginInteractorInput {
-    
+    func postUserEmail(_ email: String)
 }
 
 protocol LoginInteractorOutput {

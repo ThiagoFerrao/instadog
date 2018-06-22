@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
     
     @IBAction func enterEmailButtonTapped() {
-        
+        eventHandler?.enterEmailButtonTapped(isEmailValid: !emailTextField.hasErrorMessage, userEmail: emailTextField?.text)
     }
     
     var eventHandler: LoginModuleInterface?
@@ -33,5 +33,9 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginViewInterface {
     func setupLoginTextFieldDelegate(_ delegate: UITextFieldDelegate) {
         emailTextField.delegate = delegate
+    }
+    
+    func showAlert(_ alertController: UIAlertController) {
+        present(alertController, animated: true, completion: nil)
     }
 }

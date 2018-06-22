@@ -19,6 +19,18 @@ class LoginPresenter: NSObject {
         self.interactorInput = LoginInteractor(output: self)
         self.userInterface = userInterface
     }
+    
+    
+    // MARK: Private Methods
+    
+    private func emailIsInvalid() {
+        let alertController = UIAlertController(title: "Ops!"
+            , message: "The email address entered is invalid :(\nPlease, reenter it"
+            , preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        
+        userInterface?.showAlert(alertController)
+    }
 }
 
 
@@ -27,6 +39,15 @@ class LoginPresenter: NSObject {
 extension LoginPresenter: LoginModuleInterface {
     func viewDidLoad() {
         userInterface?.setupLoginTextFieldDelegate(self)
+    }
+    
+    func enterEmailButtonTapped(isEmailValid: Bool, userEmail: String?) {
+        guard let email = userEmail, isEmailValid else {
+            emailIsInvalid()
+            return
+        }
+        
+        interactorInput?.postUserEmail(email)
     }
 }
 
