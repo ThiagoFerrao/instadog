@@ -13,5 +13,7 @@ protocol GalleryInteractorInput {
 }
 
 protocol GalleryInteractorOutput {
-    
+    func getCategoryDataSuccessful(_ dataResult: [String : [String]])
+    func failedToGetUserToken()
+    func getCategoryDataFailed()
 }

@@ -55,5 +55,15 @@ extension GalleryPresenter: GalleryViewHandlerInterface {
 // MARK: GalleryInteractorOutput
 
 extension GalleryPresenter: GalleryInteractorOutput {
+    func getCategoryDataSuccessful(_ dataResult: [String : [String]]) {
+        
+    }
     
+    func failedToGetUserToken() {
+        
+    }
+    
+    func getCategoryDataFailed() {
+        
+    }
 }
