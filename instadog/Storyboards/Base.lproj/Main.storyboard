@@ -261,11 +261,53 @@
                         <outlet property="collectionView" destination="qkw-yK-0Ub" id="wEX-J6-Rbu"/>
                         <outlet property="loadingIndicator" destination="cmx-hp-KLG" id="mei-LS-CpO"/>
                         <outlet property="segmentedControl" destination="5GZ-oO-JpH" id="Mkt-2K-Xjq"/>
+                        <segue destination="TKY-Zk-yda" kind="show" identifier="SegueToPhotoVC" id="t0x-ay-axu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvX-sP-P61" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981.60000000000002" y="116.49175412293854"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="53d-9v-fN7">
+            <objects>
+                <viewController title="Photo" id="TKY-Zk-yda" customClass="PhotoViewController" customModule="instadog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0WA-yB-dPi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0K-iS-4I8">
+                                <rect key="frame" x="40" y="144" width="295" height="28"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" name="color_primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_app" translatesAutoresizingMaskIntoConstraints="NO" id="HMY-Q1-hMF">
+                                <rect key="frame" x="40" y="212" width="295" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HMY-Q1-hMF" secondAttribute="height" multiplier="1:1" id="fBq-WQ-TY6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="color_background"/>
+                        <constraints>
+                            <constraint firstItem="g0K-iS-4I8" firstAttribute="leading" secondItem="Uod-tB-2bU" secondAttribute="leading" constant="40" id="0d6-Dh-mFk"/>
+                            <constraint firstItem="Uod-tB-2bU" firstAttribute="trailing" secondItem="g0K-iS-4I8" secondAttribute="trailing" constant="40" id="LrL-hx-PVt"/>
+                            <constraint firstItem="HMY-Q1-hMF" firstAttribute="trailing" secondItem="g0K-iS-4I8" secondAttribute="trailing" id="RCO-C0-iKs"/>
+                            <constraint firstItem="HMY-Q1-hMF" firstAttribute="top" secondItem="g0K-iS-4I8" secondAttribute="bottom" constant="40" id="rRu-fK-1py"/>
+                            <constraint firstItem="g0K-iS-4I8" firstAttribute="top" secondItem="Uod-tB-2bU" secondAttribute="top" constant="80" id="tyF-pJ-I7H"/>
+                            <constraint firstItem="HMY-Q1-hMF" firstAttribute="leading" secondItem="g0K-iS-4I8" secondAttribute="leading" id="zGq-Y2-y7Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uod-tB-2bU"/>
+                    </view>
+                    <connections>
+                        <outlet property="dogBreedLabel" destination="g0K-iS-4I8" id="kNT-NS-CCT"/>
+                        <outlet property="dogPhotoImage" destination="HMY-Q1-hMF" id="ac2-sa-juR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GTH-Id-kj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="116"/>
         </scene>
     </scenes>
     <resources>
@@ -276,6 +318,9 @@
         </namedColor>
         <namedColor name="color_background">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_primary">
+            <color red="0.0" green="0.35294117650000001" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="color_primary">
             <color red="0.0" green="0.35294117647058826" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

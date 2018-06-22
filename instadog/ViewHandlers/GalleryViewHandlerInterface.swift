@@ -11,4 +11,5 @@ import Foundation
 protocol GalleryViewHandlerInterface {
     func viewDidLoad()
     func segmentWasChangedTo(_ index: Int, title: String?)
+    func dogPhotoSelected(category: String?, photo: String?)
 }

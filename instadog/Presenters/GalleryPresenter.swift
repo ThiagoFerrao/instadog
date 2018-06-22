@@ -49,6 +49,11 @@ extension GalleryPresenter: GalleryViewHandlerInterface {
         userInterface?.showLoading()
         interactorInput?.getGalleryOfCategory(index, title: segmentTitle)
     }
+    
+    func dogPhotoSelected(category: String?, photo: String?) {
+        let tuple = (category, photo)
+        userInterface?.presentPhotoScreen(send: tuple)
+    }
 }
 
 

@@ -14,5 +14,5 @@ protocol GalleryViewInterface {
     func hideLoading()
     func updateGalleryData(_ newGalleryData: [String : [String]])
     func showAlert(_ alertController: UIAlertController)
-    func presentPhotoScreen()
+    func presentPhotoScreen(send sendData: (String?, String?))
 }

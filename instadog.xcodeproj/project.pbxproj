@@ -35,6 +35,7 @@
 		AFEFEF1D20DD282000FAC541 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1C20DD282000FAC541 /* GalleryPresenter.swift */; };
 		AFEFEF1F20DD283500FAC541 /* GalleryInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1E20DD283500FAC541 /* GalleryInteractorIO.swift */; };
 		AFEFEF2120DD284600FAC541 /* GalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF2020DD284600FAC541 /* GalleryInteractor.swift */; };
+		AFEFEF2320DD450F00FAC541 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF2220DD450F00FAC541 /* PhotoViewController.swift */; };
 		E2E93668277D49D698DB6A00 /* Pods_instadog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013A04EA523EE4B36CDCE3DB /* Pods_instadog.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		AFEFEF1C20DD282000FAC541 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
 		AFEFEF1E20DD283500FAC541 /* GalleryInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryInteractorIO.swift; sourceTree = "<group>"; };
 		AFEFEF2020DD284600FAC541 /* GalleryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryInteractor.swift; sourceTree = "<group>"; };
+		AFEFEF2220DD450F00FAC541 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		BD0B54E1DC7A7B6F7CBE7A43 /* Pods-instadog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instadog/Pods-instadog.debug.xcconfig"; sourceTree = "<group>"; };
 		E2F2C16F407C21E647B88000 /* Pods-instadog-instadogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog-instadogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +222,7 @@
 			children = (
 				AFA56F4620DC86680098F0B6 /* LoginViewController.swift */,
 				AFEFEF1320DD04E500FAC541 /* GalleryViewController.swift */,
+				AFEFEF2220DD450F00FAC541 /* PhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 			files = (
 				AFEFEEFB20DCCF1400FAC541 /* LoginPresenter.swift in Sources */,
 				AFEFEF1D20DD282000FAC541 /* GalleryPresenter.swift in Sources */,
+				AFEFEF2320DD450F00FAC541 /* PhotoViewController.swift in Sources */,
 				AFEFEF0820DCDF0800FAC541 /* Constants.swift in Sources */,
 				AFEFEF2120DD284600FAC541 /* GalleryInteractor.swift in Sources */,
 				AFEFEEF720DCCEE800FAC541 /* LoginViewInterface.swift in Sources */,
@@ -769,7 +773,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -785,7 +792,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -801,7 +811,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -818,7 +832,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -833,7 +851,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -848,7 +870,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

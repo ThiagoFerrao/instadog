@@ -45,6 +45,23 @@ class GalleryViewController: UIViewController {
     private func checkIfGalleryDataIsAvailable() -> Bool {
         return galleryData[currentSegmentTitleSelected?.lowercased() ?? ""] != nil
     }
+    
+    
+    // MARK: SEGUE
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case Constants.SEGUE_IDENTIFIER.TO_PHOTO:
+            let tuple = sender as? (String?, String?)
+            let photoVC = segue.destination as? PhotoViewController
+            
+            photoVC?.dogBreed = tuple?.0
+            photoVC?.dogPhoto = tuple?.1
+            
+        default:
+            return
+        }
+    }
 }
 
 
@@ -77,8 +94,8 @@ extension GalleryViewController: GalleryViewInterface {
         present(alertController, animated: true, completion: nil)
     }
     
-    func presentPhotoScreen() {
-        
+    func presentPhotoScreen(send sendData: (String?, String?)) {
+        performSegue(withIdentifier: Constants.SEGUE_IDENTIFIER.TO_PHOTO, sender: sendData)
     }
 }
 
@@ -108,5 +125,9 @@ extension GalleryViewController: UICollectionViewDataSource {
 extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width / 3, height: view.frame.width / 3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        eventHandler?.dogPhotoSelected(category: currentSegmentTitleSelected, photo: galleryData[currentSegmentTitleSelected?.lowercased() ?? ""]?[indexPath.row])
     }
 }
