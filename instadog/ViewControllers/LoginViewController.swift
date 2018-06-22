@@ -7,13 +7,31 @@
 //
 
 import UIKit
-import MaterialComponents.MaterialTextFields
+import SkyFloatingLabelTextField
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
+    
+    @IBAction func enterEmailButtonTapped() {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.delegate = self
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let emailTextField = textField as? SkyFloatingLabelTextField
         
+        if let text = textField.text, (text.count < 3 || !text.contains("@")) {
+            emailTextField?.errorMessage = "Invalid email"
+            return true
+        }
+        
+        emailTextField?.errorMessage = ""
+        return true
     }
 }
