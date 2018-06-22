@@ -15,6 +15,11 @@ class GalleryViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     @IBAction func segmentedControlValueChanged() {
+        if (checkIfGalleryDataIsAvailable()) {
+            collectionView.reloadData()
+            return
+        }
+        
         eventHandler?.segmentWasChangedTo(currentSegmentIndexSelected, title: currentSegmentTitleSelected)
     }
     
@@ -33,6 +38,13 @@ class GalleryViewController: UIViewController {
         eventHandler = GalleryPresenter(userInterface: self)
         eventHandler?.viewDidLoad()
     }
+    
+    
+    // MARK: Private Methods
+    
+    private func checkIfGalleryDataIsAvailable() -> Bool {
+        return galleryData[currentSegmentTitleSelected?.lowercased() ?? ""] != nil
+    }
 }
 
 
@@ -40,6 +52,11 @@ class GalleryViewController: UIViewController {
 
 extension GalleryViewController: GalleryViewInterface {
     func setupContent() {
+        if (checkIfGalleryDataIsAvailable()) {
+            collectionView.reloadData()
+            return
+        }
+        
         eventHandler?.segmentWasChangedTo(currentSegmentIndexSelected, title: currentSegmentTitleSelected)
     }
     
@@ -53,6 +70,11 @@ extension GalleryViewController: GalleryViewInterface {
         loadingIndicator.isHidden = true
         collectionView.alpha = Constants.ALPHA.ENABLE
         view.isUserInteractionEnabled = true
+    }
+    
+    func updateGalleryData(_ newGalleryData: [String : [String]]) {
+        galleryData.merge(newGalleryData) { (_, new) in new }
+        collectionView.reloadData()
     }
     
     func showAlert(_ alertController: UIAlertController) {

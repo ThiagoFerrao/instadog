@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func enterEmailButtonTapped() {
         eventHandler?.enterEmailButtonTapped(isEmailValid: !emailTextField.hasErrorMessage, userEmail: emailTextField?.text)
+        emailTextField.resignFirstResponder()
     }
     
     var eventHandler: LoginViewHandlerInterface?

@@ -56,14 +56,27 @@ extension GalleryPresenter: GalleryViewHandlerInterface {
 
 extension GalleryPresenter: GalleryInteractorOutput {
     func getCategoryDataSuccessful(_ dataResult: [String : [String]]) {
-        
+        userInterface?.hideLoading()
+        userInterface?.updateGalleryData(dataResult)
     }
     
     func failedToGetUserToken() {
+        let alertController = UIAlertController(title: "Ops!"
+            , message: "We were unable to get your account athentication :(\nPlease, try to login or select a category again later"
+            , preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
         
+        userInterface?.hideLoading()
+        userInterface?.showAlert(alertController)
     }
     
     func getCategoryDataFailed() {
+        let alertController = UIAlertController(title: "Ops!"
+            , message: "We were unable to connect to our server :(\nPlease, try to select the desired category again later"
+            , preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
         
+        userInterface?.hideLoading()
+        userInterface?.showAlert(alertController)
     }
 }
