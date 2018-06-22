@@ -91,11 +91,17 @@ extension GalleryViewController: GalleryViewInterface {
 
 extension GalleryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        guard let segmentTitle = currentSegmentTitleSelected?.lowercased(), let dogPhotoList = galleryData[segmentTitle] else {
+            return 0
+        }
+        
+        return dogPhotoList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.REUSABLE_IDENTIFIER.GALLERY_CELL, for: indexPath)
+        
+        return cell
     }
 }
 
