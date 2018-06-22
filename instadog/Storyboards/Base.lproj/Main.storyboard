@@ -130,16 +130,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CyH-Ym-bUo">
+                                <rect key="frame" x="169" y="347" width="37" height="37"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="color_background"/>
                         <constraints>
                             <constraint firstItem="TGf-DM-djd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="1Fi-mi-fGi"/>
+                            <constraint firstItem="CyH-Ym-bUo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4Nz-Iz-T3V"/>
                             <constraint firstItem="Mqc-JF-KmW" firstAttribute="leading" secondItem="TGf-DM-djd" secondAttribute="leading" id="7So-mc-V7N"/>
                             <constraint firstItem="TGf-DM-djd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="JP6-4v-7ca"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TGf-DM-djd" secondAttribute="trailing" constant="40" id="Jyy-wL-rcF"/>
                             <constraint firstItem="zwv-DG-n2G" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="KPj-Jb-1Dm"/>
                             <constraint firstItem="Mqc-JF-KmW" firstAttribute="trailing" secondItem="TGf-DM-djd" secondAttribute="trailing" id="ThF-B6-jz6"/>
                             <constraint firstItem="Mqc-JF-KmW" firstAttribute="top" secondItem="TGf-DM-djd" secondAttribute="bottom" constant="80" id="Wr4-Fh-fYc"/>
+                            <constraint firstItem="CyH-Ym-bUo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bIh-8p-ipM"/>
                             <constraint firstItem="zwv-DG-n2G" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mdU-4L-TSf"/>
                             <constraint firstItem="zwv-DG-n2G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="z8Y-0B-WAy"/>
                         </constraints>
@@ -147,7 +153,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="HqY-BH-EKq"/>
                     <connections>
+                        <outlet property="emailContainer" destination="Mqc-JF-KmW" id="pDa-yy-as8"/>
                         <outlet property="emailTextField" destination="bor-ky-kga" id="evb-Jk-IS8"/>
+                        <outlet property="loadingIndicator" destination="CyH-Ym-bUo" id="yFa-He-ZoT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

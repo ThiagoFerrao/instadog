@@ -42,11 +42,12 @@ extension LoginPresenter: LoginViewHandlerInterface {
     }
     
     func enterEmailButtonTapped(isEmailValid: Bool, userEmail: String?) {
-        guard let email = userEmail, isEmailValid else {
+        guard let email = userEmail, !email.isEmpty, email != "Email Address", isEmailValid else {
             emailIsInvalid()
             return
         }
         
+        userInterface?.showLoading()
         interactorInput?.postUserEmail(email)
     }
 }
@@ -56,6 +57,7 @@ extension LoginPresenter: LoginViewHandlerInterface {
 
 extension LoginPresenter: LoginInteractorOutput {
     func postUserEmailSuccessful() {
+        userInterface?.hideLoading()
         userInterface?.presentPhotoGalleryScreen()
     }
     
@@ -65,6 +67,7 @@ extension LoginPresenter: LoginInteractorOutput {
             , preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
         
+        userInterface?.hideLoading()
         userInterface?.showAlert(alertController)
     }
     
@@ -74,6 +77,7 @@ extension LoginPresenter: LoginInteractorOutput {
             , preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
         
+        userInterface?.hideLoading()
         userInterface?.showAlert(alertController)
     }
 }

@@ -11,5 +11,7 @@ import UIKit
 protocol LoginViewInterface {
     func setupLoginTextFieldDelegate(_ delegate: UITextFieldDelegate)
     func showAlert(_ alertController: UIAlertController)
+    func showLoading()
+    func hideLoading()
     func presentPhotoGalleryScreen()
 }

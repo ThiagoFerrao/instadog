@@ -11,7 +11,9 @@ import SkyFloatingLabelTextField
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var emailContainer: UIView!
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     @IBAction func enterEmailButtonTapped() {
         eventHandler?.enterEmailButtonTapped(isEmailValid: !emailTextField.hasErrorMessage, userEmail: emailTextField?.text)
@@ -33,6 +35,18 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginViewInterface {
     func setupLoginTextFieldDelegate(_ delegate: UITextFieldDelegate) {
         emailTextField.delegate = delegate
+    }
+    
+    func showLoading() {
+        loadingIndicator.isHidden = false
+        emailContainer.alpha = Constants.ALPHA.DISABLE
+        view.isUserInteractionEnabled = false
+    }
+    
+    func hideLoading() {
+        loadingIndicator.isHidden = true
+        emailContainer.alpha = Constants.ALPHA.ENABLE
+        view.isUserInteractionEnabled = true
     }
     
     func showAlert(_ alertController: UIAlertController) {

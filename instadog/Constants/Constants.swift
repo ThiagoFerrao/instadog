@@ -6,8 +6,7 @@
 //  Copyright © 2018 Thiago Ferrão. All rights reserved.
 //
 
-import Foundation
-
+import UIKit
 
 struct Constants {
     
@@ -23,5 +22,10 @@ struct Constants {
     struct KEYCHAIN {
         static let STORAGE = Bundle.main.bundleIdentifier! + ".keychain"
         static let USER_TOKEN = "userToken"
+    }
+    
+    struct ALPHA {
+        static let ENABLE : CGFloat = 1
+        static let DISABLE : CGFloat = 0.6
     }
 }
