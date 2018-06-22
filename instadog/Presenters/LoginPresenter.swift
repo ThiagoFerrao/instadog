@@ -36,7 +36,7 @@ class LoginPresenter: NSObject {
 
 // MARK: LoginModuleInterface
 
-extension LoginPresenter: LoginModuleInterface {
+extension LoginPresenter: LoginViewHandlerInterface {
     func viewDidLoad() {
         userInterface?.setupLoginTextFieldDelegate(self)
     }

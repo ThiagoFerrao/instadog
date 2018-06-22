@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
         eventHandler?.enterEmailButtonTapped(isEmailValid: !emailTextField.hasErrorMessage, userEmail: emailTextField?.text)
     }
     
-    var eventHandler: LoginModuleInterface?
+    var eventHandler: LoginViewHandlerInterface?
     
     override func viewDidLoad() {
         super.viewDidLoad()

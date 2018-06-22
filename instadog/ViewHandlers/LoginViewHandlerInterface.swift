@@ -1,5 +1,5 @@
 //
-//  LoginModuleInterface.swift
+//  LoginViewHandlerInterface.swift
 //  instadog
 //
 //  Created by Thiago Ferrão on 22/06/18.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol LoginModuleInterface {
+protocol LoginViewHandlerInterface {
     func viewDidLoad()
     func enterEmailButtonTapped(isEmailValid: Bool, userEmail: String?)
 }

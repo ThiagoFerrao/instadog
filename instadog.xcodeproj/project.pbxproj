@@ -17,7 +17,7 @@
 		AFA56F6520DC86690098F0B6 /* instadogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F6420DC86690098F0B6 /* instadogUITests.swift */; };
 		AFEFEEF020DCC2F000FAC541 /* ValidationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEEF20DCC2F000FAC541 /* ValidationUtil.swift */; };
 		AFEFEEF720DCCEE800FAC541 /* LoginViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEF620DCCEE800FAC541 /* LoginViewInterface.swift */; };
-		AFEFEEF920DCCF0800FAC541 /* LoginModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEF820DCCF0800FAC541 /* LoginModuleInterface.swift */; };
+		AFEFEEF920DCCF0800FAC541 /* LoginViewHandlerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEF820DCCF0800FAC541 /* LoginViewHandlerInterface.swift */; };
 		AFEFEEFB20DCCF1400FAC541 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEFA20DCCF1400FAC541 /* LoginPresenter.swift */; };
 		AFEFEEFD20DCCF2400FAC541 /* LoginInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEFC20DCCF2400FAC541 /* LoginInteractorIO.swift */; };
 		AFEFEEFF20DCCF3200FAC541 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEEFE20DCCF3200FAC541 /* LoginInteractor.swift */; };
@@ -61,7 +61,7 @@
 		AFA56F6620DC86690098F0B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFEFEEEF20DCC2F000FAC541 /* ValidationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtil.swift; sourceTree = "<group>"; };
 		AFEFEEF620DCCEE800FAC541 /* LoginViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInterface.swift; sourceTree = "<group>"; };
-		AFEFEEF820DCCF0800FAC541 /* LoginModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleInterface.swift; sourceTree = "<group>"; };
+		AFEFEEF820DCCF0800FAC541 /* LoginViewHandlerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewHandlerInterface.swift; sourceTree = "<group>"; };
 		AFEFEEFA20DCCF1400FAC541 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		AFEFEEFC20DCCF2400FAC541 /* LoginInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorIO.swift; sourceTree = "<group>"; };
 		AFEFEEFE20DCCF3200FAC541 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 			children = (
 				AFEFEEF220DCCE7300FAC541 /* Views */,
 				AFEFEEEC20DC9BE800FAC541 /* ViewControllers */,
-				AFEFEEF520DCCEBF00FAC541 /* Modules */,
+				AFEFEEF520DCCEBF00FAC541 /* ViewHandlers */,
 				AFEFEEF120DCCE7100FAC541 /* Presenters */,
 				AFEFEEF420DCCE7A00FAC541 /* InteractorIOs */,
 				AFEFEEF320DCCE7700FAC541 /* Interactors */,
@@ -232,12 +232,12 @@
 			path = InteractorIOs;
 			sourceTree = "<group>";
 		};
-		AFEFEEF520DCCEBF00FAC541 /* Modules */ = {
+		AFEFEEF520DCCEBF00FAC541 /* ViewHandlers */ = {
 			isa = PBXGroup;
 			children = (
-				AFEFEEF820DCCF0800FAC541 /* LoginModuleInterface.swift */,
+				AFEFEEF820DCCF0800FAC541 /* LoginViewHandlerInterface.swift */,
 			);
-			path = Modules;
+			path = ViewHandlers;
 			sourceTree = "<group>";
 		};
 		AFEFEF0020DCD7EA00FAC541 /* Services */ = {
@@ -503,7 +503,7 @@
 				AFEFEEF020DCC2F000FAC541 /* ValidationUtil.swift in Sources */,
 				AFEFEEFF20DCCF3200FAC541 /* LoginInteractor.swift in Sources */,
 				AFA56F4520DC86680098F0B6 /* AppDelegate.swift in Sources */,
-				AFEFEEF920DCCF0800FAC541 /* LoginModuleInterface.swift in Sources */,
+				AFEFEEF920DCCF0800FAC541 /* LoginViewHandlerInterface.swift in Sources */,
 				AFEFEEFD20DCCF2400FAC541 /* LoginInteractorIO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,7 +681,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -697,7 +700,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -713,7 +719,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -730,7 +740,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -745,7 +759,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -760,7 +778,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
