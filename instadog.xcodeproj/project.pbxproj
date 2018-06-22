@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9368C4E428EF205362300CFD /* Pods_instadog_instadogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30619B9701CA0086B114C7E2 /* Pods_instadog_instadogTests.framework */; };
 		AFA56F4520DC86680098F0B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F4420DC86680098F0B6 /* AppDelegate.swift */; };
 		AFA56F4720DC86680098F0B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F4620DC86680098F0B6 /* LoginViewController.swift */; };
 		AFA56F4A20DC86680098F0B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA56F4820DC86680098F0B6 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		AFA56F4F20DC86690098F0B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA56F4D20DC86690098F0B6 /* LaunchScreen.storyboard */; };
 		AFA56F5A20DC86690098F0B6 /* instadogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F5920DC86690098F0B6 /* instadogTests.swift */; };
 		AFA56F6520DC86690098F0B6 /* instadogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F6420DC86690098F0B6 /* instadogUITests.swift */; };
+		E2E93668277D49D698DB6A00 /* Pods_instadog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013A04EA523EE4B36CDCE3DB /* Pods_instadog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		013A04EA523EE4B36CDCE3DB /* Pods_instadog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instadog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30619B9701CA0086B114C7E2 /* Pods_instadog_instadogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instadog_instadogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6069A97A6963816A5E4486 /* Pods-instadog-instadogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog-instadogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4DC8FE1010CA4BA9AF7B4677 /* Pods-instadog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog.release.xcconfig"; path = "Pods/Target Support Files/Pods-instadog/Pods-instadog.release.xcconfig"; sourceTree = "<group>"; };
 		AFA56F4120DC86680098F0B6 /* instadog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instadog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA56F4420DC86680098F0B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA56F4620DC86680098F0B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		AFA56F6020DC86690098F0B6 /* instadogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instadogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA56F6420DC86690098F0B6 /* instadogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instadogUITests.swift; sourceTree = "<group>"; };
 		AFA56F6620DC86690098F0B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD0B54E1DC7A7B6F7CBE7A43 /* Pods-instadog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instadog/Pods-instadog.debug.xcconfig"; sourceTree = "<group>"; };
+		E2F2C16F407C21E647B88000 /* Pods-instadog-instadogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog-instadogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E93668277D49D698DB6A00 /* Pods_instadog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9368C4E428EF205362300CFD /* Pods_instadog_instadogTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +84,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A8297E110ECCCFB9898ED74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD0B54E1DC7A7B6F7CBE7A43 /* Pods-instadog.debug.xcconfig */,
+				4DC8FE1010CA4BA9AF7B4677 /* Pods-instadog.release.xcconfig */,
+				3E6069A97A6963816A5E4486 /* Pods-instadog-instadogTests.debug.xcconfig */,
+				E2F2C16F407C21E647B88000 /* Pods-instadog-instadogTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A47566CBE4191B5E75A7B7F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				013A04EA523EE4B36CDCE3DB /* Pods_instadog.framework */,
+				30619B9701CA0086B114C7E2 /* Pods_instadog_instadogTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFA56F3820DC86680098F0B6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +111,8 @@
 				AFA56F5820DC86690098F0B6 /* instadogTests */,
 				AFA56F6320DC86690098F0B6 /* instadogUITests */,
 				AFA56F4220DC86680098F0B6 /* Products */,
+				6A8297E110ECCCFB9898ED74 /* Pods */,
+				A47566CBE4191B5E75A7B7F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFA56F6920DC86690098F0B6 /* Build configuration list for PBXNativeTarget "instadog" */;
 			buildPhases = (
+				D29DE5C0DA4ED519FA796D3E /* [CP] Check Pods Manifest.lock */,
 				AFA56F3D20DC86680098F0B6 /* Sources */,
 				AFA56F3E20DC86680098F0B6 /* Frameworks */,
 				AFA56F3F20DC86680098F0B6 /* Resources */,
+				8FFCED0C3ECE60DA82E36983 /* [CP] Embed Pods Frameworks */,
+				B4A4EF44C82EC616B7F9195A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFA56F6C20DC86690098F0B6 /* Build configuration list for PBXNativeTarget "instadogTests" */;
 			buildPhases = (
+				3C81D38C610E86385966BF68 /* [CP] Check Pods Manifest.lock */,
 				AFA56F5120DC86690098F0B6 /* Sources */,
 				AFA56F5220DC86690098F0B6 /* Frameworks */,
 				AFA56F5320DC86690098F0B6 /* Resources */,
+				D75563D7B4D1A9ABBE75673A /* [CP] Embed Pods Frameworks */,
+				4456271A849339C8D5DEF95C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +304,115 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C81D38C610E86385966BF68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instadog-instadogTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4456271A849339C8D5DEF95C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FFCED0C3ECE60DA82E36983 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-instadog/Pods-instadog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instadog/Pods-instadog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4A4EF44C82EC616B7F9195A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instadog/Pods-instadog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D29DE5C0DA4ED519FA796D3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instadog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D75563D7B4D1A9ABBE75673A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFA56F3D20DC86680098F0B6 /* Sources */ = {
@@ -444,15 +591,13 @@
 		};
 		AFA56F6A20DC86690098F0B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD0B54E1DC7A7B6F7CBE7A43 /* Pods-instadog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -462,15 +607,13 @@
 		};
 		AFA56F6B20DC86690098F0B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DC8FE1010CA4BA9AF7B4677 /* Pods-instadog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -480,16 +623,13 @@
 		};
 		AFA56F6D20DC86690098F0B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E6069A97A6963816A5E4486 /* Pods-instadog-instadogTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -500,16 +640,13 @@
 		};
 		AFA56F6E20DC86690098F0B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2F2C16F407C21E647B88000 /* Pods-instadog-instadogTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -524,11 +661,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -543,11 +676,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

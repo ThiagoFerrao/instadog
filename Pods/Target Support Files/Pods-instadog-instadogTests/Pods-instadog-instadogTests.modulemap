@@ -1,0 +1,6 @@
+framework module Pods_instadog_instadogTests {
+  umbrella header "Pods-instadog-instadogTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
