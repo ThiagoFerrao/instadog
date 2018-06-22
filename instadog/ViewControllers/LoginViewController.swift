@@ -9,8 +9,8 @@
 import UIKit
 import SkyFloatingLabelTextField
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
-
+class LoginViewController: UIViewController {
+    
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
     
     @IBAction func enterEmailButtonTapped() {
@@ -19,19 +19,45 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         emailTextField.delegate = self
     }
-    
+}
+
+
+// MARK: UITextFieldDelegate
+
+extension LoginViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let emailTextField = textField as? SkyFloatingLabelTextField
+        let emailField = textField as? SkyFloatingLabelTextField
         
-        if let text = textField.text, (text.count < 3 || !text.contains("@")) {
-            emailTextField?.errorMessage = "Invalid email"
+        guard let oldEmailText = emailField?.text, let validRange = Range(range, in: oldEmailText) else {
             return true
         }
         
-        emailTextField?.errorMessage = ""
+        let newEmailText = oldEmailText.replacingCharacters(in: validRange, with: string)
+        
+        if newEmailText.isEmpty {
+            emailField?.errorMessage = ""
+            return true
+        }
+        
+        if !ValidationUtil.shared.isEmail(newEmailText) {
+            emailField?.errorMessage = "Invalid email"
+            return true
+        }
+        
+        emailField?.errorMessage = ""
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        let emailField = textField as? SkyFloatingLabelTextField
+        emailField?.errorMessage = ""
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
 }
