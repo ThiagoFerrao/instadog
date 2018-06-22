@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F3DFA0720DD7FB10020D8E1 /* ValidationUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DFA0620DD7FB10020D8E1 /* ValidationUtilTests.swift */; };
+		8F3DFA0920DD7FBF0020D8E1 /* KeychainStoreUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DFA0820DD7FBF0020D8E1 /* KeychainStoreUtilTests.swift */; };
 		9368C4E428EF205362300CFD /* Pods_instadog_instadogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30619B9701CA0086B114C7E2 /* Pods_instadog_instadogTests.framework */; };
 		AFA56F4520DC86680098F0B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F4420DC86680098F0B6 /* AppDelegate.swift */; };
 		AFA56F4720DC86680098F0B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA56F4620DC86680098F0B6 /* LoginViewController.swift */; };
@@ -61,6 +63,8 @@
 		30619B9701CA0086B114C7E2 /* Pods_instadog_instadogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instadog_instadogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6069A97A6963816A5E4486 /* Pods-instadog-instadogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog-instadogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4DC8FE1010CA4BA9AF7B4677 /* Pods-instadog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog.release.xcconfig"; path = "Pods/Target Support Files/Pods-instadog/Pods-instadog.release.xcconfig"; sourceTree = "<group>"; };
+		8F3DFA0620DD7FB10020D8E1 /* ValidationUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtilTests.swift; sourceTree = "<group>"; };
+		8F3DFA0820DD7FBF0020D8E1 /* KeychainStoreUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStoreUtilTests.swift; sourceTree = "<group>"; };
 		AFA56F4120DC86680098F0B6 /* instadog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instadog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA56F4420DC86680098F0B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA56F4620DC86680098F0B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +141,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8F3DFA0520DD7F990020D8E1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8F3DFA0620DD7FB10020D8E1 /* ValidationUtilTests.swift */,
+				8F3DFA0820DD7FBF0020D8E1 /* KeychainStoreUtilTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A47566CBE4191B5E75A7B7F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +206,7 @@
 		AFA56F5820DC86690098F0B6 /* instadogTests */ = {
 			isa = PBXGroup;
 			children = (
+				8F3DFA0520DD7F990020D8E1 /* Utils */,
 				AFA56F5920DC86690098F0B6 /* instadogTests.swift */,
 				AFA56F5B20DC86690098F0B6 /* Info.plist */,
 			);
@@ -604,7 +618,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3DFA0720DD7FB10020D8E1 /* ValidationUtilTests.swift in Sources */,
 				AFA56F5A20DC86690098F0B6 /* instadogTests.swift in Sources */,
+				8F3DFA0920DD7FBF0020D8E1 /* KeychainStoreUtilTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
