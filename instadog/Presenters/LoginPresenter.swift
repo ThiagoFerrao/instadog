@@ -26,7 +26,7 @@ class LoginPresenter: NSObject {
 
 extension LoginPresenter: LoginModuleInterface {
     func viewDidLoad() {
-        
+        userInterface?.setupLoginTextFieldDelegate(self)
     }
 }
 

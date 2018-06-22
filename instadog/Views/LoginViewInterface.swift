@@ -6,8 +6,8 @@
 //  Copyright © 2018 Thiago Ferrão. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol LoginViewInterface {
-    
+    func setupLoginTextFieldDelegate(_ delegate: UITextFieldDelegate)
 }

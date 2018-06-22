@@ -24,7 +24,6 @@ class LoginViewController: UIViewController {
         
         eventHandler = LoginPresenter(userInterface: self)
         eventHandler?.viewDidLoad()
-//        emailTextField.delegate = self
     }
 }
 
@@ -32,5 +31,7 @@ class LoginViewController: UIViewController {
 // MARK: LoginViewInterface
 
 extension LoginViewController: LoginViewInterface {
-    
+    func setupLoginTextFieldDelegate(_ delegate: UITextFieldDelegate) {
+        emailTextField.delegate = delegate
+    }
 }
