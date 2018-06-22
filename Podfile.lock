@@ -1,21 +1,24 @@
 PODS:
   - Alamofire (4.7.2)
   - KeychainAccess (3.1.1)
+  - Kingfisher (4.8.0)
   - ObjectMapper (3.3.0)
   - SkyFloatingLabelTextField (3.5.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - KeychainAccess (~> 3.0)
+  - Kingfisher (~> 4.0)
   - ObjectMapper (~> 3.2)
   - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
 
-PODFILE CHECKSUM: b17a67455a48ba27e6b14405042e082b8612381f
+PODFILE CHECKSUM: 98320bdb2cf1e368a3b6e890f9b713ebf89e1378
 
 COCOAPODS: 1.4.0

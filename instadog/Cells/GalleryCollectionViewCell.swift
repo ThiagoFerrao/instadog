@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import Kingfisher
 
 class GalleryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var dogImage: UIImageView!
     
-    var imageURL: String? {
+    var imageUrlString: String? {
         didSet {
+            guard let imageString = imageUrlString, let imageUrl = URL(string: imageString) else {
+                return
+            }
             
+            self.dogImage.kf.setImage(with: imageUrl
+                , placeholder: UIImage(named: "icon_app")
+                , options: [
+                    .transition(.fade(1)),
+                ], progressBlock: nil, completionHandler: nil)
         }
     }
 }

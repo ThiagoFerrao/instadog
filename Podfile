@@ -10,6 +10,7 @@ target 'instadog' do
   pod 'Alamofire', '~> 4.7'
   pod 'ObjectMapper', '~> 3.2'
   pod 'KeychainAccess', '~> 3.0'
+  pod 'Kingfisher', '~> 4.0'
 
   target 'instadogTests' do
     inherit! :complete
