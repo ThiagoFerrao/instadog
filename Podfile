@@ -7,6 +7,8 @@ inhibit_all_warnings!
 
 target 'instadog' do
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'Alamofire', '~> 4.7'
+  pod 'ObjectMapper', '~> 3.2'
 
   target 'instadogTests' do
     inherit! :complete
