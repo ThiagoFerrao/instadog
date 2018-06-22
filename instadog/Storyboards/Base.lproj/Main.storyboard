@@ -209,6 +209,10 @@
                                         <size key="customSize" width="100" height="100"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="41I-hq-Gbf" id="idF-jc-1L2"/>
+                                    <outlet property="delegate" destination="41I-hq-Gbf" id="cFK-uj-xHA"/>
+                                </connections>
                             </collectionView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5GZ-oO-JpH">
                                 <rect key="frame" x="20" y="84" width="335" height="29"/>
@@ -218,7 +222,14 @@
                                     <segment title="Pug"/>
                                     <segment title="Labrador"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged" destination="41I-hq-Gbf" eventType="valueChanged" id="CrS-G0-tIk"/>
+                                </connections>
                             </segmentedControl>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cmx-hp-KLG">
+                                <rect key="frame" x="169" y="347" width="37" height="37"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="color_background"/>
                         <constraints>
@@ -226,15 +237,22 @@
                             <constraint firstItem="i13-Y9-r1C" firstAttribute="trailing" secondItem="qkw-yK-0Ub" secondAttribute="trailing" id="8In-2g-hjV"/>
                             <constraint firstItem="dzW-iF-oyl" firstAttribute="centerX" secondItem="i13-Y9-r1C" secondAttribute="centerX" id="Ht5-Yz-LMb"/>
                             <constraint firstItem="qkw-yK-0Ub" firstAttribute="top" secondItem="5GZ-oO-JpH" secondAttribute="bottom" constant="20" id="Msc-c4-jiI"/>
+                            <constraint firstItem="cmx-hp-KLG" firstAttribute="centerX" secondItem="i13-Y9-r1C" secondAttribute="centerX" id="ZXq-0S-ECf"/>
                             <constraint firstItem="5GZ-oO-JpH" firstAttribute="leading" secondItem="i13-Y9-r1C" secondAttribute="leading" constant="20" id="cF9-15-M0E"/>
                             <constraint firstAttribute="bottom" secondItem="qkw-yK-0Ub" secondAttribute="bottom" id="che-ru-ov1"/>
                             <constraint firstItem="dzW-iF-oyl" firstAttribute="centerY" secondItem="i13-Y9-r1C" secondAttribute="centerY" id="csD-ab-OEk"/>
                             <constraint firstItem="qkw-yK-0Ub" firstAttribute="leading" secondItem="i13-Y9-r1C" secondAttribute="leading" id="fJh-oP-u1X"/>
                             <constraint firstItem="dzW-iF-oyl" firstAttribute="leading" secondItem="i13-Y9-r1C" secondAttribute="leading" constant="70" id="p3d-s4-Ltd"/>
+                            <constraint firstItem="cmx-hp-KLG" firstAttribute="centerY" secondItem="i13-Y9-r1C" secondAttribute="centerY" id="pbh-7n-w8o"/>
                             <constraint firstItem="5GZ-oO-JpH" firstAttribute="top" secondItem="i13-Y9-r1C" secondAttribute="top" constant="20" id="raf-QW-1dj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i13-Y9-r1C"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="qkw-yK-0Ub" id="wEX-J6-Rbu"/>
+                        <outlet property="loadingIndicator" destination="cmx-hp-KLG" id="mei-LS-CpO"/>
+                        <outlet property="segmentedControl" destination="5GZ-oO-JpH" id="Mkt-2K-Xjq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvX-sP-P61" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

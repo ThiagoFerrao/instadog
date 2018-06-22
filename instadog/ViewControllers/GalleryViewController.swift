@@ -10,6 +10,14 @@ import UIKit
 
 class GalleryViewController: UIViewController {
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    @IBAction func segmentedControlValueChanged() {
+        
+    }
+    
     var eventHandler: GalleryViewHandlerInterface?
     
     override func viewDidLoad() {
@@ -24,5 +32,25 @@ class GalleryViewController: UIViewController {
 // MARK: GalleryViewInterface
 
 extension GalleryViewController: GalleryViewInterface {
+    
+}
+
+
+// MARK: UICollectionViewDataSource
+
+extension GalleryViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+}
+
+
+// MARK: UICollectionViewDelegate
+
+extension GalleryViewController: UICollectionViewDelegate {
     
 }
