@@ -23,11 +23,24 @@ class LoginInteractor: NSObject {
 
 extension LoginInteractor: LoginInteractorInput {
     func postUserEmail(_ email: String) {
-        LoginService.shared.postUserEmail(email: email, success: { (userAuth) in
-            return
-            
+        LoginService.shared.postUserEmail(email: email
+            , success: { (userAuth) in
+                guard let userToken = userAuth.token else {
+                    self.interactorOutput?.failedToStoreUserToken()
+                    return
+                }
+                
+                do {
+                    try KeychainStoreUtil.shared.storeUserToken(userToken: userToken)
+                } catch {
+                    self.interactorOutput?.failedToStoreUserToken()
+                    return
+                }
+                
+                self.interactorOutput?.postUserEmailSuccessful()
+                
         }) { (error) in
-            return
+            self.interactorOutput?.postUserEmailFailed()
         }
     }
 }

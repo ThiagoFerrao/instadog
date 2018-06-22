@@ -13,5 +13,7 @@ protocol LoginInteractorInput {
 }
 
 protocol LoginInteractorOutput {
-    
+    func postUserEmailSuccessful()
+    func failedToStoreUserToken()
+    func postUserEmailFailed()
 }

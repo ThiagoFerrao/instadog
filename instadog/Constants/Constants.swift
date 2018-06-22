@@ -19,4 +19,9 @@ struct Constants {
         static let SIGNUP = "/signup"
         static let FEED = "/feed"
     }
+    
+    struct KEYCHAIN {
+        static let STORAGE = Bundle.main.bundleIdentifier! + ".keychain"
+        static let USER_TOKEN = "userToken"
+    }
 }

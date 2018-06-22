@@ -55,7 +55,27 @@ extension LoginPresenter: LoginViewHandlerInterface {
 // MARK: LoginInteractorOutput
 
 extension LoginPresenter: LoginInteractorOutput {
+    func postUserEmailSuccessful() {
+        userInterface?.presentPhotoGalleryScreen()
+    }
     
+    func failedToStoreUserToken() {
+        let alertController = UIAlertController(title: "Ops!"
+            , message: "We were unable to store your account athentication :(\nPlease, try to login again later"
+            , preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        
+        userInterface?.showAlert(alertController)
+    }
+    
+    func postUserEmailFailed() {
+        let alertController = UIAlertController(title: "Ops!"
+            , message: "We were unable to connect to our server :(\nPlease, try to login again later"
+            , preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        
+        userInterface?.showAlert(alertController)
+    }
 }
 
 

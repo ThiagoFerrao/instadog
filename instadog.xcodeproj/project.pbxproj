@@ -27,6 +27,7 @@
 		AFEFEF0A20DCE1A900FAC541 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0920DCE1A900FAC541 /* Category.swift */; };
 		AFEFEF0E20DCE1C900FAC541 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0D20DCE1C900FAC541 /* UserAuth.swift */; };
 		AFEFEF1020DCEFCA00FAC541 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF0F20DCEFCA00FAC541 /* CategoryService.swift */; };
+		AFEFEF1220DCF22A00FAC541 /* KeychainStoreUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1120DCF22A00FAC541 /* KeychainStoreUtil.swift */; };
 		E2E93668277D49D698DB6A00 /* Pods_instadog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013A04EA523EE4B36CDCE3DB /* Pods_instadog.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		AFEFEF0920DCE1A900FAC541 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AFEFEF0D20DCE1C900FAC541 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		AFEFEF0F20DCEFCA00FAC541 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		AFEFEF1120DCF22A00FAC541 /* KeychainStoreUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStoreUtil.swift; sourceTree = "<group>"; };
 		BD0B54E1DC7A7B6F7CBE7A43 /* Pods-instadog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instadog/Pods-instadog.debug.xcconfig"; sourceTree = "<group>"; };
 		E2F2C16F407C21E647B88000 /* Pods-instadog-instadogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog-instadogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEFEEEF20DCC2F000FAC541 /* ValidationUtil.swift */,
+				AFEFEF1120DCF22A00FAC541 /* KeychainStoreUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -455,12 +458,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-instadog/Pods-instadog-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
@@ -510,12 +515,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
@@ -536,6 +543,7 @@
 				AFEFEEF720DCCEE800FAC541 /* LoginViewInterface.swift in Sources */,
 				AFEFEF1020DCEFCA00FAC541 /* CategoryService.swift in Sources */,
 				AFA56F4720DC86680098F0B6 /* LoginViewController.swift in Sources */,
+				AFEFEF1220DCF22A00FAC541 /* KeychainStoreUtil.swift in Sources */,
 				AFEFEEF020DCC2F000FAC541 /* ValidationUtil.swift in Sources */,
 				AFEFEEFF20DCCF3200FAC541 /* LoginInteractor.swift in Sources */,
 				AFEFEF0E20DCE1C900FAC541 /* UserAuth.swift in Sources */,
@@ -721,10 +729,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -740,10 +745,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -759,11 +761,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -780,11 +778,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -799,11 +793,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -818,11 +808,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = instadogUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thiagocruz.instadogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
