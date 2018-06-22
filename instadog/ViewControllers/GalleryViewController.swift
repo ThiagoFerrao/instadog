@@ -10,4 +10,19 @@ import UIKit
 
 class GalleryViewController: UIViewController {
     
+    var eventHandler: GalleryViewHandlerInterface?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        eventHandler = GalleryPresenter(userInterface: self)
+        eventHandler?.viewDidLoad()
+    }
+}
+
+
+// MARK: GalleryViewInterface
+
+extension GalleryViewController: GalleryViewInterface {
+    
 }

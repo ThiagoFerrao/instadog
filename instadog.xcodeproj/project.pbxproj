@@ -30,6 +30,11 @@
 		AFEFEF1220DCF22A00FAC541 /* KeychainStoreUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1120DCF22A00FAC541 /* KeychainStoreUtil.swift */; };
 		AFEFEF1420DD04E500FAC541 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1320DD04E500FAC541 /* GalleryViewController.swift */; };
 		AFEFEF1720DD068000FAC541 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1620DD068000FAC541 /* GalleryCollectionViewCell.swift */; };
+		AFEFEF1920DD27F300FAC541 /* GalleryViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1820DD27F300FAC541 /* GalleryViewInterface.swift */; };
+		AFEFEF1B20DD280C00FAC541 /* GalleryViewHandlerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1A20DD280C00FAC541 /* GalleryViewHandlerInterface.swift */; };
+		AFEFEF1D20DD282000FAC541 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1C20DD282000FAC541 /* GalleryPresenter.swift */; };
+		AFEFEF1F20DD283500FAC541 /* GalleryInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF1E20DD283500FAC541 /* GalleryInteractorIO.swift */; };
+		AFEFEF2120DD284600FAC541 /* GalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEFEF2020DD284600FAC541 /* GalleryInteractor.swift */; };
 		E2E93668277D49D698DB6A00 /* Pods_instadog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013A04EA523EE4B36CDCE3DB /* Pods_instadog.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +88,11 @@
 		AFEFEF1120DCF22A00FAC541 /* KeychainStoreUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStoreUtil.swift; sourceTree = "<group>"; };
 		AFEFEF1320DD04E500FAC541 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		AFEFEF1620DD068000FAC541 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFEFEF1820DD27F300FAC541 /* GalleryViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewInterface.swift; sourceTree = "<group>"; };
+		AFEFEF1A20DD280C00FAC541 /* GalleryViewHandlerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewHandlerInterface.swift; sourceTree = "<group>"; };
+		AFEFEF1C20DD282000FAC541 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
+		AFEFEF1E20DD283500FAC541 /* GalleryInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryInteractorIO.swift; sourceTree = "<group>"; };
+		AFEFEF2020DD284600FAC541 /* GalleryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryInteractor.swift; sourceTree = "<group>"; };
 		BD0B54E1DC7A7B6F7CBE7A43 /* Pods-instadog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instadog/Pods-instadog.debug.xcconfig"; sourceTree = "<group>"; };
 		E2F2C16F407C21E647B88000 /* Pods-instadog-instadogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instadog-instadogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instadog-instadogTests/Pods-instadog-instadogTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEFEEFA20DCCF1400FAC541 /* LoginPresenter.swift */,
+				AFEFEF1C20DD282000FAC541 /* GalleryPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -235,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEFEEF620DCCEE800FAC541 /* LoginViewInterface.swift */,
+				AFEFEF1820DD27F300FAC541 /* GalleryViewInterface.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEFEEFE20DCCF3200FAC541 /* LoginInteractor.swift */,
+				AFEFEF2020DD284600FAC541 /* GalleryInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -251,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEFEEFC20DCCF2400FAC541 /* LoginInteractorIO.swift */,
+				AFEFEF1E20DD283500FAC541 /* GalleryInteractorIO.swift */,
 			);
 			path = InteractorIOs;
 			sourceTree = "<group>";
@@ -259,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEFEEF820DCCF0800FAC541 /* LoginViewHandlerInterface.swift */,
+				AFEFEF1A20DD280C00FAC541 /* GalleryViewHandlerInterface.swift */,
 			);
 			path = ViewHandlers;
 			sourceTree = "<group>";
@@ -553,7 +568,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFEFEEFB20DCCF1400FAC541 /* LoginPresenter.swift in Sources */,
+				AFEFEF1D20DD282000FAC541 /* GalleryPresenter.swift in Sources */,
 				AFEFEF0820DCDF0800FAC541 /* Constants.swift in Sources */,
+				AFEFEF2120DD284600FAC541 /* GalleryInteractor.swift in Sources */,
 				AFEFEEF720DCCEE800FAC541 /* LoginViewInterface.swift in Sources */,
 				AFEFEF1020DCEFCA00FAC541 /* CategoryService.swift in Sources */,
 				AFA56F4720DC86680098F0B6 /* LoginViewController.swift in Sources */,
@@ -561,6 +578,8 @@
 				AFEFEF1220DCF22A00FAC541 /* KeychainStoreUtil.swift in Sources */,
 				AFEFEEF020DCC2F000FAC541 /* ValidationUtil.swift in Sources */,
 				AFEFEEFF20DCCF3200FAC541 /* LoginInteractor.swift in Sources */,
+				AFEFEF1F20DD283500FAC541 /* GalleryInteractorIO.swift in Sources */,
+				AFEFEF1920DD27F300FAC541 /* GalleryViewInterface.swift in Sources */,
 				AFEFEF0E20DCE1C900FAC541 /* UserAuth.swift in Sources */,
 				AFA56F4520DC86680098F0B6 /* AppDelegate.swift in Sources */,
 				AFEFEEF920DCCF0800FAC541 /* LoginViewHandlerInterface.swift in Sources */,
@@ -569,6 +588,7 @@
 				AFEFEEFD20DCCF2400FAC541 /* LoginInteractorIO.swift in Sources */,
 				AFEFEF0320DCDAE200FAC541 /* BaseService.swift in Sources */,
 				AFEFEF0A20DCE1A900FAC541 /* Category.swift in Sources */,
+				AFEFEF1B20DD280C00FAC541 /* GalleryViewHandlerInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

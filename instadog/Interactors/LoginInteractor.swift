@@ -19,7 +19,7 @@ class LoginInteractor: NSObject {
 }
 
 
-// MARK: LoginInteractorOutput
+// MARK: LoginInteractorInput
 
 extension LoginInteractor: LoginInteractorInput {
     func postUserEmail(_ email: String) {
