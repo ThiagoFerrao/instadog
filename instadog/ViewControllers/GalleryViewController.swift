@@ -15,10 +15,17 @@ class GalleryViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     @IBAction func segmentedControlValueChanged() {
-        
+        eventHandler?.segmentWasChangedTo(currentSegmentIndexSelected, title: currentSegmentTitleSelected)
     }
     
     var eventHandler: GalleryViewHandlerInterface?
+    var galleryData = [String : [String]]()
+    var currentSegmentIndexSelected : Int {
+        return segmentedControl.selectedSegmentIndex
+    }
+    var currentSegmentTitleSelected : String? {
+        return segmentedControl.titleForSegment(at: currentSegmentIndexSelected)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +39,29 @@ class GalleryViewController: UIViewController {
 // MARK: GalleryViewInterface
 
 extension GalleryViewController: GalleryViewInterface {
+    func setupContent() {
+        eventHandler?.segmentWasChangedTo(currentSegmentIndexSelected, title: currentSegmentTitleSelected)
+    }
     
+    func showLoading() {
+        loadingIndicator.isHidden = false
+        collectionView.alpha = Constants.ALPHA.DISABLE
+        view.isUserInteractionEnabled = false
+    }
+    
+    func hideLoading() {
+        loadingIndicator.isHidden = true
+        collectionView.alpha = Constants.ALPHA.ENABLE
+        view.isUserInteractionEnabled = true
+    }
+    
+    func showAlert(_ alertController: UIAlertController) {
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func presentPhotoScreen() {
+        
+    }
 }
 
 

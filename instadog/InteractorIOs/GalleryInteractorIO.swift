@@ -9,7 +9,7 @@
 import Foundation
 
 protocol GalleryInteractorInput {
-    
+    func getGalleryOfCategory(_ index: Int, title: String)
 }
 
 protocol GalleryInteractorOutput {

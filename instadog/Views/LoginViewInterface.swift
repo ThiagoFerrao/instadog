@@ -13,5 +13,5 @@ protocol LoginViewInterface {
     func showAlert(_ alertController: UIAlertController)
     func showLoading()
     func hideLoading()
-    func presentPhotoGalleryScreen()
+    func presentGalleryScreen()
 }

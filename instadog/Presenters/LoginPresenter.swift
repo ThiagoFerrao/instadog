@@ -58,7 +58,7 @@ extension LoginPresenter: LoginViewHandlerInterface {
 extension LoginPresenter: LoginInteractorOutput {
     func postUserEmailSuccessful() {
         userInterface?.hideLoading()
-        userInterface?.presentPhotoGalleryScreen()
+        userInterface?.presentGalleryScreen()
     }
     
     func failedToStoreUserToken() {

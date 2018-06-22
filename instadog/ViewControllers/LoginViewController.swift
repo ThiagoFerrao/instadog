@@ -53,7 +53,7 @@ extension LoginViewController: LoginViewInterface {
         present(alertController, animated: true, completion: nil)
     }
     
-    func presentPhotoGalleryScreen() {
+    func presentGalleryScreen() {
         performSegue(withIdentifier: Constants.SEGUE_IDENTIFIER.TO_GALLERY, sender: nil)
     }
 }

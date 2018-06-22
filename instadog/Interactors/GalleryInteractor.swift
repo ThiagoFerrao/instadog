@@ -22,5 +22,7 @@ class GalleryInteractor: NSObject {
 // MARK: GalleryInteractorInput
 
 extension GalleryInteractor: GalleryInteractorInput {
-
+    func getGalleryOfCategory(_ index: Int, title: String) {
+        
+    }
 }
